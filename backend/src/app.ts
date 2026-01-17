@@ -5,7 +5,8 @@ import { errorHandler } from './middlewares/error.middleware';
 
 // Import routes
 import authRoutes from './routes/auth.routes';
-import teamRoutes from './routes/team.routes'; 
+import teamRoutes from './routes/team.routes';
+import projectRoutes from './routes/project.routes'; 
 
 const app: Application = express();
 
@@ -37,7 +38,8 @@ app.get('/', (_req: Request, res:  Response) => {
     endpoints: {
       health: '/health',
       auth: '/api/auth',
-      teams: '/api/teams', // ← Add this
+      teams: '/api/teams', 
+      projects: '/api/projects',
     },
   });
 });
@@ -45,6 +47,7 @@ app.get('/', (_req: Request, res:  Response) => {
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/teams', teamRoutes);
+app.use('/api/projects', projectRoutes);
 
 // 404 handler
 app.use((req: Request, res: Response) => {

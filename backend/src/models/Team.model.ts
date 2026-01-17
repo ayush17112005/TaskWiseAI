@@ -62,7 +62,7 @@ teamSchema.index({ 'members.userId': 1 }); // Index nested field!
 // VIRTUAL FIELDS - Computed properties
 // Virtual fields are NOT stored in DB, computed on-the-fly
 teamSchema.virtual('memberCount').get(function () {
-  return this.members.length;
+  return this.members?.length || 0;
 });
 
 // Enable virtuals in JSON
