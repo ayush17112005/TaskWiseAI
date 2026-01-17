@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target":  "ES2020",                          // Modern JavaScript features
+    "lib": ["ES2020"],                           // Standard library to include
+    
+    /* Modules */
+    "module": "commonjs",                        // Node.js uses CommonJS
+    "rootDir": "./src",                          // Source code location
+    "moduleResolution": "node",                  // How to resolve imports
+    "baseUrl": "./",                             // Base directory for imports
+    "paths": {                                   // Path aliases (shortcuts)
+      "@/*": ["src/*"],
+      "@config/*": ["src/config/*"],
+      "@models/*": ["src/models/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@routes/*": ["src/routes/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@services/*":  ["src/services/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    
+    /* Emit */
+    "outDir": "./dist",                          // Compiled JS goes here
+    "removeComments": true,                      // Smaller output files
+    "sourceMap": true,                           // For debugging
+    
+    /* Type Checking */
+    "strict":  true,                              // Enable all strict type checks
+    "noImplicitAny": true,                       // Error on implicit 'any' type
+    "strictNullChecks": true,                    // Catch null/undefined errors
+    "strictFunctionTypes": true,                 // Strict function signatures
+    "noUnusedLocals": true,                      // Error on unused variables
+    "noUnusedParameters": true,                  // Error on unused parameters
+    "noImplicitReturns": true,                   // Error on missing returns
+    
+    /* Interop Constraints */
+    "esModuleInterop": true,                     // Better ES6 module imports
+    "allowSyntheticDefaultImports": true,        // Allows default imports
+    "forceConsistentCasingInFileNames": true,    // Case-sensitive imports
+    
+    /* Skip Checking */
+    "skipLibCheck":  true                         // Faster compilation
+  },
+  "include": ["src/**/*"],                       // Files to compile
+  "exclude": ["node_modules", "dist"]            // Files to ignore
+}
