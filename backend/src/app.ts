@@ -5,11 +5,12 @@ import { errorHandler } from './middlewares/error.middleware';
 
 // Import routes
 import authRoutes from './routes/auth.routes';
+import teamRoutes from './routes/team.routes'; 
 
 const app: Application = express();
 
-// MIDDLEWARE
 
+// MIDDLEWARE
 app.use(cors({
   origin: config.clientUrl,
   credentials: true,
@@ -18,9 +19,8 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ROUTES
 
-app.get('/health', (_req: Request, res:  Response) => {
+app.get('/health', (_req: Request, res: Response) => {
   res.status(200).json({
     success: true,
     message: 'TaskWise AI Backend is running!  🚀',
@@ -36,15 +36,17 @@ app.get('/', (_req: Request, res:  Response) => {
     version: '1.0.0',
     endpoints: {
       health: '/health',
-      auth:  '/api/auth',
+      auth: '/api/auth',
+      teams: '/api/teams', // ← Add this
     },
   });
 });
 
-// 📚 API Routes
+// API Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/teams', teamRoutes);
 
-// 📚 404 handler
+// 404 handler
 app.use((req: Request, res: Response) => {
   res.status(404).json({
     success: false,
@@ -52,9 +54,8 @@ app.use((req: Request, res: Response) => {
   });
 });
 
-// ============================================
-// ERROR HANDLER (must be last!)
-// ============================================
+
+// ERROR HANDLER
 app.use(errorHandler);
 
 export default app;
