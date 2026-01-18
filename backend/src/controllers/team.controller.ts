@@ -129,7 +129,7 @@ export const getTeamById = async (
 
     const team = await Team.findById(id)
       .populate('createdBy', 'name email avatar')
-      .populate('members. userId', 'name email avatar');
+      .populate('members.userId', 'name email avatar');
 
     if (!team) {
       throw new AppError('Team not found', 404);

@@ -255,7 +255,7 @@ export const getTaskById = async (
       .populate('assignedTo', 'name email avatar')
       .populate('parentTask', 'title status')
       .populate('dependencies', 'title status')
-      .populate('comments. userId', 'name email avatar');
+      .populate('comments.userId', 'name email avatar');
 
     if (!task) {
       throw new AppError('Task not found', 404);
@@ -534,7 +534,7 @@ export const addComment = async (
 
     await task.save();
 
-    await task.populate('comments. userId', 'name email avatar');
+    await task.populate('comments.userId', 'name email avatar');
 
     // Notify task creator and assignee (if not the commenter)
     const notifyUsers = [

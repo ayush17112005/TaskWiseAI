@@ -1,28 +1,28 @@
 import api from './api';
-import type { ApiResponse, User } from '../types';
+import type { ApiResponse } from '../types';
 
-export const authService = {
-  // Register new user
-  register: async (name:  string, email: string, password:  string): Promise<ApiResponse<{ user: User; token: string }>> => {
-    const response = await api.post('/auth/register', { name, email, password });
+export const aiService = {
+  // Suggest assignee for task
+  suggestAssignee: async (taskId: string): Promise<ApiResponse> => {
+    const response = await api.post(`/ai/suggest-assignee`, { taskId });
     return response.data;
   },
 
-  // Login user
-  login: async (email: string, password: string): Promise<ApiResponse<{ user: User; token: string }>> => {
-    const response = await api. post('/auth/login', { email, password });
-    return response. data;
-  },
-
-  // Get current user
-  getMe: async (): Promise<ApiResponse<{ user: User }>> => {
-    const response = await api.get('/auth/me');
+  // Suggest deadline for task
+  suggestDeadline: async (taskId: string): Promise<ApiResponse> => {
+    const response = await api.post(`/ai/suggest-deadline`, { taskId });
     return response.data;
   },
 
-  // Logout
-  logout: () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+  // Suggest priority for task
+  suggestPriority: async (taskId: string): Promise<ApiResponse> => {
+    const response = await api.post(`/ai/suggest-priority`, { taskId });
+    return response.data;
+  },
+
+  // Breakdown task into subtasks
+  breakdownTask: async (taskId: string, maxSubtasks: number = 5): Promise<ApiResponse> => {
+    const response = await api.post(`/ai/breakdown-task`, { taskId, maxSubtasks });
+    return response.data;
   },
 };
