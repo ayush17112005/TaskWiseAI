@@ -7,3 +7,6 @@ export * from './team.types';
 export * from './project.types';
 export * from './task.types';
 export * from './notification.types'; 
+
+//AI type
+export * from './ai.types';

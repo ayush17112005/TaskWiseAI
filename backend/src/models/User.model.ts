@@ -40,7 +40,7 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
     role: {
       type: String,
       enum: Object.values(UserRole), // 📚 Only allow values from UserRole enum
-      default: UserRole. MEMBER,
+      default: UserRole.MEMBER,
     },
     avatar: {
       type: String,

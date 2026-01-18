@@ -9,7 +9,7 @@ interface Config{
     mongoUri: string;
     jwtSecret: string;
     jwtExpire: string;
-    openaiApiKey: string;
+    geminiApiKey: string;
     clientUrl: string;
 }
 
@@ -19,12 +19,12 @@ const config: Config = {
     mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/taskwise-ai',
     jwtSecret: process.env.JWT_SECRET || 'your_jwt_secret',
     jwtExpire: process.env.JWT_EXPIRE || '7d',
-    openaiApiKey: process.env.OPENAI_API_KEY || '',
+    geminiApiKey: process.env.GEMINI_API_KEY || '',
     clientUrl: process.env.CLIENT_URL || 'http://localhost:3000',
 }
 
 //Validate essential environment variables
-if(!config.jwtSecret || !config.openaiApiKey){
+if(!config.jwtSecret || !config.geminiApiKey){
     throw new Error("Essential environment variables are missing.");
 }
 
