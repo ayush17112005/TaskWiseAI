@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HackerRank-inspired global styles */
+@layer base {
+  body {
+    @apply font-sans bg-background text-text-primary;
+  }
+
+  h1 {
+    @apply text-4xl font-semibold text-text-primary;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold text-text-primary;
+  }
+
+  h3 {
+    @apply text-2xl font-medium text-text-primary;
+  }
+
+  h4 {
+    @apply text-xl font-medium text-text-primary;
+  }
+
+  h5 {
+    @apply text-lg font-medium text-text-primary;
+  }
+
+  h6 {
+    @apply text-base font-medium text-text-primary;
+  }
+}
+
+@layer components {
+  /* HackerRank-style buttons */
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition-colors font-medium;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-4 py-2 rounded hover:bg-secondary-dark transition-colors font-medium;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition-all font-medium;
+  }
+
+  /* HackerRank-style cards */
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm p-6;
+  }
+
+  /* HackerRank-style inputs */
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary;
+  }
+
+  /* HackerRank-style table */
+  .table {
+    @apply w-full border-collapse;
+  }
+
+  .table th {
+    @apply bg-background-gray px-4 py-3 text-left font-semibold text-text-primary border-b border-gray-200;
+  }
+
+  .table td {
+    @apply px-4 py-3 border-b border-gray-200;
+  }
+
+  .table tr:hover {
+    @apply bg-background-gray;
+  }
+}
+
+/* Custom scrollbar (HackerRank style) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
