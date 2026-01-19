@@ -67,8 +67,8 @@ Modern project management tools lack intelligent automation, forcing teams to ma
 
 ## 📸 Screenshots
 
-### Dashboard
-![Dashboard](screenshots/Screenshot%202026-01-18%20184033.png)
+### Login Page
+![Login Page](screenshots/Screenshot%202026-01-18%20184033.png)
 
 ### Task Management
 ![Task Management](screenshots/Screenshot%202026-01-18%20211945.png)
@@ -76,11 +76,9 @@ Modern project management tools lack intelligent automation, forcing teams to ma
 ### AI-Powered Features
 ![AI Features](screenshots/Screenshot%202026-01-18%20220949.png)
 
-### Team & Project View
-![Team Management](screenshots/Screenshot%202026-01-18%20222026.png)
+### AI Suggestion
+![AI Suggestion](screenshots/Screenshot%202026-01-18%20222026.png)
 
-### Analytics Dashboard
-![Analytics](screenshots/Screenshot%202026-01-18%20205825.png)
 
 ---
 
