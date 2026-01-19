@@ -14,7 +14,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Google AI](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev/)
 
-[Features](#-core-features) • [AI Capabilities](#-ai-powered-features) • [Installation](#-installation--setup) • [API Documentation](#-api-documentation) • [Tech Stack](#-tech-stack)
+[Screenshots](#-screenshots) • [Features](#-core-features) • [AI Capabilities](#-ai-powered-features) • [Installation](#-installation--setup) • [API Documentation](#-api-documentation)
 
 </div>
 
@@ -24,14 +24,15 @@
 
 1. [Problem Statement](#-problem-statement)
 2. [Solution Overview](#-solution-overview)
-3. [Core Features](#-core-features)
-4. [AI-Powered Features](#-ai-powered-features)
-5. [Tech Stack](#-tech-stack)
-6. [Installation & Setup](#-installation--setup)
-7. [API Documentation](#-api-documentation)
-8. [Project Structure](#-project-structure)
-9. [Environment Variables](#-environment-variables)
-10. [Author](#-author)
+3. [Screenshots](#-screenshots)
+4. [Core Features](#-core-features)
+5. [AI-Powered Features](#-ai-powered-features)
+6. [Tech Stack](#-tech-stack)
+7. [Installation & Setup](#-installation--setup)
+8. [API Documentation](#-api-documentation)
+9. [Project Structure](#-project-structure)
+10. [Environment Variables](#-environment-variables)
+11. [Author](#-author)
 
 ---
 
@@ -61,6 +62,25 @@ Modern project management tools lack intelligent automation, forcing teams to ma
 ✅ **Team Performance Analytics** - Real-time workload tracking and insights  
 ✅ **Intelligent Automation** - Reduces manual planning overhead by 60%  
 ✅ **Context-Aware AI** - Learns from your team's unique workflow patterns  
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](screenshots/Screenshot%202026-01-18%20184033.png)
+
+### Task Management
+![Task Management](screenshots/Screenshot%202026-01-18%20211945.png)
+
+### AI-Powered Features
+![AI Features](screenshots/Screenshot%202026-01-18%20220949.png)
+
+### Team & Project View
+![Team Management](screenshots/Screenshot%202026-01-18%20222026.png)
+
+### Analytics Dashboard
+![Analytics](screenshots/Screenshot%202026-01-18%20205825.png)
 
 ---
 
