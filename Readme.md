@@ -245,30 +245,6 @@ cd backend
 npm install
 ```
 
-#### Configure Environment Variables
-Create a `.env` file in the `backend` directory:
-
-```env
-# Server Configuration
-NODE_ENV=development
-PORT=5000
-
-# Database
-MONGODB_URI=mongodb://localhost:27017/taskwise-ai
-# OR use MongoDB Atlas
-# MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/taskwise-ai
-
-# JWT Configuration
-JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
-JWT_EXPIRE=7d
-
-# Google Gemini AI
-GEMINI_API_KEY=your_gemini_api_key_here
-
-# Frontend URL (for CORS)
-CLIENT_URL=http://localhost:5173
-```
-
 #### Start Backend Server
 ```bash
 # Development mode with hot reload
@@ -295,13 +271,6 @@ npm run test:gemini
 ```bash
 cd ../frontend
 npm install
-```
-
-#### Configure Environment (Optional)
-Create a `.env` file in the `frontend` directory if you need custom API URL:
-
-```env
-VITE_API_URL=http://localhost:5000/api
 ```
 
 #### Start Frontend Development Server
